@@ -50,7 +50,7 @@ config
     "password": "",
     "farmID": 1,
     "clientID": "$macAddr",
-    "topic": "c/$clientID/farm/$farmID/action/#",
+    "topic": "farm/$farmID/action/#",
     "zoneKey": 0,
     "groupKey": 0,
     "nodeKey": 1,
@@ -243,3 +243,7 @@ topic: farm/$farmID/action/$action.clearTask/zone/$zoneKey/group/$groupKey/node/
 当网关是用电池供电的时候，电量小于 $config.minPower 的时候开始充电，充到电量 大于等于 $config.maxPower 停止充电。
 
 如果采用多电池供电方案，需要支持对单独的每个 电池/电池组 进行管理，每个 电池/电池组 都可以独立工作。
+
+## 出厂默认设置
+
+1. 网关在出产的时候默认 主题 topic 地址设置为 c/$clientID/#
