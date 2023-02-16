@@ -50,7 +50,7 @@ config
     "password": "",
     "farmID": 1,
     "clientID": "$macAddr",
-    "topic": "farm/$farmID/action/#",
+    "topic": "c/$clientID/farm/$farmID/action/#",
     "zoneKey": 0,
     "groupKey": 0,
     "nodeKey": 1,
