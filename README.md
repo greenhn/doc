@@ -2,3 +2,4 @@
 
 ## FARM 农场管理系统
 
+[Gateway 网关开发文档](gateway.md)
