@@ -246,4 +246,4 @@ topic: farm/$farmID/action/$action.clearTask/zone/$zoneKey/group/$groupKey/node/
 
 ## 出厂默认设置
 
-1. 网关在出产的时候默认 主题 topic 地址设置为 c/$clientID/#
+1. 网关在出厂的时候默认 主题 topic 地址设置为 c/$clientID/#
