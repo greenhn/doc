@@ -136,7 +136,8 @@ payload:
     "farmID": 1,
     "zoneKey": 0,
     "groupKey": 0,
-    "nodeKey": 1
+    "nodeKey": 1,
+    "type": "R330"
 }
 ```
 
