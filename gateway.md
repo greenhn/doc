@@ -31,7 +31,7 @@ BootLoader 作为网关的基本系统，它在硬件出厂前就应该刷写完
 5. password 密码
 6. farmID 农场ID
 7. topic 主题
-8. clientID 网关的MAC地址
+8. clientID 设备的唯一码，int32的纯数字
 9. zoneKey 区 key
 10. groupKey 组 key
 11. nodeKey 网关 key
