@@ -111,9 +111,16 @@ payload:
 
 topic：farm/$farmID/reply/$action.config
 
+成功：
 
 ```json
-201
+1
+```
+
+失败
+
+```json
+0
 ```
 
 ### ping 指令 (中优先级)
@@ -182,7 +189,8 @@ topic: farm/$farmID/action/$action.switch/zone/$zoneKey/group/$groupKey/node/$no
 信息回传 topic：farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ratio: 0 - 100 代表已经执行到位的开度
-ratio: 110 代表正在执行打开或关闭
+ratio: 111 代表正在执行打开
+ratio: 112 代表正在执行关闭
 
 ```json
 100
@@ -201,7 +209,8 @@ topic: farm/$farmID/action/$action.switch/zone/$zoneKey/group/$groupKey/node/$no
 信息回传 topic：farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ratio: 0 - 100 代表已经执行到位的开度
-ratio: 110 代表正在执行打开或关闭
+ratio: 111 代表正在执行打开
+ratio: 112 代表正在执行关闭
 
 ```json
 100
