@@ -88,7 +88,8 @@ action
 ```
 ### config 指令 (中优先级)
 
-topic: farm/$farmID/action/$action.config
+配置网关 topic: farm/$farmID/action/$action.config/gateway/$clientID
+配置控制器 topic: farm/$farmID/action/$action.config/rtu/$clientID
 
 payload:
 
