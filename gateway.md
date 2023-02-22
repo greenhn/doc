@@ -48,13 +48,10 @@ config
     "username": "",
     "password": "",
     "farmID": 1,
-    "clientID": "$macAddr",
     "topic": "farm/$farmID/action/#",
     "zoneKey": 0,
     "groupKey": 0,
-    "nodeKey": 1,
-    "minPower": 50,
-    "maxPower": 80
+    "nodeKey": 1
 }
 ```
 
@@ -88,6 +85,35 @@ action
     "data": 6,
     "rotary": 7,
 }
+```
+### config 指令 (中优先级)
+
+topic: farm/$farmID/action/$action.config
+
+payload:
+
+```json
+{
+    "broker": "broker.alinode.com",
+    "port": 8443,
+    "protocol": "tcp",
+    "username": "",
+    "password": "",
+    "farmID": 1,
+    "topic": "farm/$farmID/action/#",
+    "zoneKey": 0,
+    "groupKey": 0,
+    "nodeKey": 1
+}
+```
+
+信息回传
+
+topic：farm/$farmID/reply/$action.config
+
+
+```json
+201
 ```
 
 ### ping 指令 (中优先级)
