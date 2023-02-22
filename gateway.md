@@ -88,8 +88,9 @@ action
 ```
 ### config 指令 (中优先级)
 
-配置网关 topic: farm/$farmID/action/$action.config/gateway/$clientID
-配置控制器 topic: farm/$farmID/action/$action.config/rtu/$clientID
+配置网关 
+
+topic: farm/$farmID/action/$action.config/gateway/$clientID
 
 payload:
 
@@ -102,6 +103,37 @@ payload:
     "password": "",
     "farmID": 1,
     "topic": "farm/$farmID/action/#",
+    "zoneKey": 0,
+    "groupKey": 0,
+    "nodeKey": 1
+}
+```
+
+信息回传
+
+topic：farm/$farmID/reply/$action.config
+
+成功：
+
+```json
+1
+```
+
+失败
+
+```json
+0
+```
+
+配置控制器
+
+topic: farm/$farmID/action/$action.config/rtu/$clientID
+
+payload:
+
+```json
+{
+    "farmID": 1,
     "zoneKey": 0,
     "groupKey": 0,
     "nodeKey": 1
