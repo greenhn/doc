@@ -111,7 +111,7 @@ payload:
 
 信息回传
 
-topic：farm/$farmID/reply/$action.config
+topic：farm/$farmID/reply/$action.config/gateway/$clientID
 
 成功：
 
@@ -142,7 +142,7 @@ payload:
 
 信息回传
 
-topic：farm/$farmID/reply/$action.config
+topic：farm/$farmID/reply/$action.config/rtu/$clientID
 
 成功：
 
