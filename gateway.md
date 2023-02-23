@@ -115,16 +115,10 @@ payload:
 
 topic：farm/$farmID/reply/$action.config/gateway/$clientID
 
-成功：
+payload: 1 代表成功， 0 代表失败
 
 ```json
 1
-```
-
-失败
-
-```json
-0
 ```
 
 配置控制器
@@ -147,16 +141,10 @@ payload:
 
 topic：farm/$farmID/reply/$action.config/rtu/$clientID
 
-成功：
+payload: 1 代表成功， 0 代表失败
 
 ```json
 1
-```
-
-失败
-
-```json
-0
 ```
 
 ### ping 指令 (中优先级)
@@ -254,7 +242,7 @@ topic: farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeK
 
 topic: farm/$farmID/reply/$action.alert/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
-value: 0 代表正常， 1 代表阀站倒下
+payload: 0 代表正常， 1 代表阀门倒下
 
 ```json
 0
