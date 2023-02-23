@@ -69,6 +69,7 @@ $zoneKey uint8 // 区域Key
 $groupKey uint8 // 组Key
 $nodeKey uint8 // 节点Key
 $switchKey uint8 // 开关Key, 如果一个RTU支持4路控制，它的key值就为：1，2，3，4
+$clientID uint32 // 设备的唯一码
 ```
 
 ## 基础指令
