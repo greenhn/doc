@@ -84,6 +84,7 @@ action
     "clearTask": 5,
     "data": 6,
     "rotary": 7,
+    "alert": 8,
 }
 ```
 ### config 指令 (中优先级)
@@ -178,34 +179,6 @@ topic：farm/$farmID/reply/$action.ping/zone/$zoneKey/group/$groupKey/node/$node
 }
 ```
 
-### 配置节点信息 (中优先级)
-
-topic: farm/$farmID/action/$action.config/zone/$zoneKey/group/$groupKey/node/$nodeKey
-
-payload:
-
-```json
-{
-    "minPower": $minPower,
-    "maxPower": $maxPower,
-    "data":
-    [
-        {
-            "switchKey": $switchKey,
-            "minPressure": $minPressure,
-            "maxPressure": $maxPressure,
-            "priority": $priority
-        },
-        {
-            "switchKey": $switchKey,
-            "minPressure": $minPressure,
-            "maxPressure": $maxPressure,
-            "priority": $priority
-        }
-    ]
-}
-```
-
 ### switch 开关控制指令 (高优先级)
 
 payload: 0 代表关闭, 100 代表全开
@@ -266,14 +239,24 @@ action: -1 终止 0 暂停 1 启动
 
 ### 压力信息查询 (中优先级)
 
-topic: farm/$farmID/action/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/data/$switchKey
+topic: farm/$farmID/action/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ### 压力信息上报 (中优先级)
 
-topic: farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/data/$switchKey
+topic: farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ```json
 1.234
+```
+
+### 警报信息上报 (中优先级)
+
+topic: farm/$farmID/reply/$action.alert/zone/$zoneKey/group/$groupKey/node/$nodeKey
+
+value: 0 代表正常， 1 代表阀站倒下
+
+```json
+0
 ```
 
 ### task 任务控制指令 (低优先级)
