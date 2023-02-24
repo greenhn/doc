@@ -86,6 +86,7 @@ action
     "data": 6,
     "rotary": 7,
     "alert": 8,
+    "sys": 9,
 }
 ```
 ### config 指令 (中优先级)
@@ -277,6 +278,26 @@ topic: farm/$farmID/action/$action.task/zone/$zoneKey/group/$groupKey/node/$node
 清除RTU控制器对应开关的任务
 
 topic: farm/$farmID/action/$action.clearTask/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+
+### sys 指令 (中优先级)
+
+重启网关 
+
+topic: farm/$farmID/action/$action.sys/gateway/$clientID/restart
+
+payload:
+
+```json
+```
+
+重启控制器
+
+topic: farm/$farmID/action/$action.config/rtu/$clientID/restart
+
+payload:
+
+```json
+```
 
 ## 电源管理
 
