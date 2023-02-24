@@ -292,7 +292,7 @@ payload:
 
 重启控制器
 
-topic: farm/$farmID/action/$action.config/rtu/$clientID/restart
+topic: farm/$farmID/action/$action.sys/rtu/$clientID/restart
 
 payload:
 
