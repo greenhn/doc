@@ -92,9 +92,9 @@ action
 
 配置网关 
 
-topic: farm/$farmID/action/$action.config/gateway/$clientID
+topic: farm/$farmID/action/$action.config/gateway/$clientID/$key
 
-payload:
+有效的key,value值:
 
 ```json
 {
@@ -111,9 +111,15 @@ payload:
 }
 ```
 
+payload:
+
+```json
+$value
+```
+
 信息回传
 
-topic：farm/$farmID/reply/$action.config/gateway/$clientID
+topic：farm/$farmID/reply/$action.config/gateway/$clientID/$key
 
 payload: 1 代表成功， 0 代表失败
 
@@ -128,13 +134,7 @@ topic: farm/$farmID/action/$action.config/rtu/$clientID
 payload:
 
 ```json
-{
-    "farmID": 1,
-    "zoneKey": 0,
-    "groupKey": 0,
-    "nodeKey": 1,
-    "type": "R330"
-}
+"$type.$farmID.$zoneKey.$groupKey.$nodeKey"
 ```
 
 信息回传
