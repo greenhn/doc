@@ -120,7 +120,7 @@ $value
 
 信息回传
 
-topic：farm/$farmID/reply/$action.config/gateway/$clientID/$key
+topic：c/$clientID/farm/$farmID/reply/$action.config/gateway/$clientID/$key
 
 payload: 1 代表成功， 0 代表失败
 
@@ -140,7 +140,7 @@ payload:
 
 信息回传
 
-topic：farm/$farmID/reply/$action.config/rtu/$clientID
+topic：c/$clientID/farm/$farmID/reply/$action.config/rtu/$clientID
 
 payload: 1 代表成功， 0 代表失败
 
@@ -158,7 +158,7 @@ topic: farm/$farmID/action/$action.ping/zone/$zoneKey/group/$groupKey/node/$node
 
 信息回传
 
-topic：farm/$farmID/reply/$action.ping/zone/$zoneKey/group/$groupKey/node/$nodeKey
+topic：c/$clientID/farm/$farmID/reply/$action.ping/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
 ```json
 {
@@ -183,7 +183,7 @@ topic: farm/$farmID/action/$action.switch/zone/$zoneKey/group/$groupKey/node/$no
 100
 ```
 
-信息回传 topic：farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+信息回传 topic：c/$clientID/farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ratio: 0 - 100 代表已经执行到位的开度
 ratio: 111 代表正在执行打开
@@ -203,7 +203,7 @@ topic: farm/$farmID/action/$action.switch/zone/$zoneKey/group/$groupKey/node/$no
 100
 ```
 
-信息回传 topic：farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+信息回传 topic：c/$clientID/farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ratio: 0 - 100 代表已经执行到位的开度
 ratio: 111 代表正在执行打开
@@ -215,7 +215,7 @@ ratio: 112 代表正在执行关闭
 
 ### 轮灌状态上报 (高优先级)
 
-topic: farm/$farmID/reply/$action.rotary/rotary/$rotaryID/group/$groupID
+topic: c/$clientID/farm/$farmID/reply/$action.rotary/rotary/$rotaryID/group/$groupID
 
 action: -1 终止 0 暂停 1 启动 
 
@@ -233,7 +233,7 @@ topic: farm/$farmID/action/$action.data/zone/$zoneKey/group/$groupKey/node/$node
 
 ### 压力信息上报 (中优先级)
 
-topic: farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+topic: c/$clientID/farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ```json
 1.234
@@ -241,7 +241,7 @@ topic: farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeK
 
 ### 警报信息上报 (中优先级)
 
-topic: farm/$farmID/reply/$action.alert/zone/$zoneKey/group/$groupKey/node/$nodeKey
+topic: c/$clientID/farm/$farmID/reply/$action.alert/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
 payload: 0 代表正常， 1 代表阀门倒下
 
