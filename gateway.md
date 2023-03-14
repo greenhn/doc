@@ -175,9 +175,7 @@ topic：c/$gateway_clientID/farm/$farmID/reply/$action.ping/gateway
 ```json
 {
     "curPower": $curPower,
-    "curRSSI": $curRSSI,
-    "switchKey": $switchKey,
-    "ratio": $ratio
+    "curRSSI": $curRSSI
 }
 ```
 
