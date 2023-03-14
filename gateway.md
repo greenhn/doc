@@ -163,6 +163,24 @@ topic：c/$clientID/farm/$farmID/reply/$action.ping/zone/$zoneKey/group/$groupKe
 }
 ```
 
+ping gateway
+
+topic: farm/$farmID/action/$action.ping/gateway/$gateway_clientID
+
+
+信息回传
+
+topic：c/$gateway_clientID/farm/$farmID/reply/$action.ping/gateway
+
+```json
+{
+    "curPower": $curPower,
+    "curRSSI": $curRSSI,
+    "switchKey": $switchKey,
+    "ratio": $ratio
+}
+```
+
 ### switch 开关控制指令 (高优先级)
 
 payload: 0 代表关闭, 100 代表全开
@@ -238,6 +256,7 @@ topic: c/$clientID/farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey
 topic: c/$clientID/farm/$farmID/reply/$action.alert/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
 key: fallDown, blocked
+
 payload: 0 代表正常， 1 代表阀门倒下
 
 
