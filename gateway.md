@@ -237,10 +237,15 @@ topic: c/$clientID/farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey
 
 topic: c/$clientID/farm/$farmID/reply/$action.alert/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
+key: fallDown, blocked
 payload: 0 代表正常， 1 代表阀门倒下
 
+
 ```json
-0
+{
+    "key": "fallDown",
+    "value": 1
+}
 ```
 
 ### task 任务控制指令 (低优先级)
