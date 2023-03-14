@@ -95,6 +95,8 @@ action
 
 topic: farm/$farmID/action/$action.config/gateway/$clientID
 
+payload:
+
 ```json
 {
     "broker": "broker.alinode.com",
@@ -108,12 +110,6 @@ topic: farm/$farmID/action/$action.config/gateway/$clientID
     "groupKey": 0,
     "nodeKey": 1
 }
-```
-
-payload:
-
-```json
-$value
 ```
 
 信息回传
