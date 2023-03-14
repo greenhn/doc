@@ -93,9 +93,7 @@ action
 
 配置网关 
 
-topic: farm/$farmID/action/$action.config/gateway/$clientID/$key
-
-有效的key,value值:
+topic: farm/$farmID/action/$action.config/gateway/$clientID
 
 ```json
 {
@@ -120,7 +118,7 @@ $value
 
 信息回传
 
-topic：c/$clientID/farm/$farmID/reply/$action.config/gateway/$clientID/$key
+topic：c/$clientID/farm/$farmID/reply/$action.config/gateway
 
 payload: 1 代表成功， 0 代表失败
 
@@ -140,7 +138,7 @@ payload:
 
 信息回传
 
-topic：c/$clientID/farm/$farmID/reply/$action.config/rtu/$clientID
+topic：c/$gateway_clientID/farm/$farmID/reply/$action.config/rtu/$rtu_clientID
 
 payload: 1 代表成功， 0 代表失败
 
