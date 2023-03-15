@@ -129,7 +129,13 @@ topic: farm/$farmID/action/$action.config/rtu/$clientID
 payload:
 
 ```json
-"$type.$farmID.$zoneKey.$groupKey.$nodeKey"
+{
+    "type": 330,
+    "farmID": 1,
+    "zoneKey": 0,
+    "groupKey": 0,
+    "nodeKey": 1
+}
 ```
 
 信息回传
