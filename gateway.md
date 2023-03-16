@@ -132,9 +132,9 @@ payload:
 {
     "type": 330,
     "farmID": 1,
-    "zoneKey": 0,
-    "groupKey": 0,
-    "nodeKey": 1
+    "zoneKey": 1,
+    "groupKey": 1,
+    "nodeKey": 2
 }
 ```
 
