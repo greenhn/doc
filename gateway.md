@@ -247,7 +247,7 @@ topic: farm/$farmID/action/$action.data/rtu/zone/$zoneKey/group/$groupKey/node/$
 
 ### 压力信息上报 (中优先级)
 
-topic: c/$clientID/farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+topic: c/$clientID/farm/$farmID/reply/$action.data/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ```json
 1.234
@@ -255,7 +255,7 @@ topic: c/$clientID/farm/$farmID/reply/$action.data/zone/$zoneKey/group/$groupKey
 
 ### 警报信息上报 (中优先级)
 
-topic: c/$clientID/farm/$farmID/reply/$action.alert/zone/$zoneKey/group/$groupKey/node/$nodeKey
+topic: c/$clientID/farm/$farmID/reply/$action.alert/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
 key: fallDown, blocked
 
@@ -271,7 +271,7 @@ payload: 0 代表正常， 1 代表阀门倒下
 
 ### task 任务控制指令 (低优先级)
 
-topic: farm/$farmID/action/$action.task/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+topic: farm/$farmID/action/$action.task/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 1. 在 startAt 的时间，打开开关，10 秒后关闭开关
 
@@ -297,7 +297,7 @@ topic: farm/$farmID/action/$action.task/zone/$zoneKey/group/$groupKey/node/$node
 
 清除RTU控制器对应开关的任务
 
-topic: farm/$farmID/action/$action.clearTask/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+topic: farm/$farmID/action/$action.clearTask/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ### sys 指令 (中优先级)
 
