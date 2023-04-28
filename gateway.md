@@ -191,15 +191,13 @@ payload: 0 代表关闭, 100 代表全开
 
 #### 控制 网关 控制器
 
-$nodeKey = 1
-
-topic: farm/$farmID/action/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+topic: farm/$farmID/action/$action.switch/gateway/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ```json
 100
 ```
 
-信息回传 topic：c/$clientID/farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+信息回传 topic：c/$clientID/farm/$farmID/reply/$action.switch/gateway/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ratio: 0 - 100 代表已经执行到位的开度
 ratio: 111 代表正在执行打开
@@ -213,13 +211,13 @@ ratio: 112 代表正在执行关闭
 
 $nodeKey > 1
 
-topic: farm/$farmID/action/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+topic: farm/$farmID/action/$action.switch/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ```json
 100
 ```
 
-信息回传 topic：c/$clientID/farm/$farmID/reply/$action.switch/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+信息回传 topic：c/$clientID/farm/$farmID/reply/$action.switch/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ratio: 0 - 100 代表已经执行到位的开度
 ratio: 111 代表正在执行打开
@@ -245,7 +243,7 @@ action: -1 终止 0 暂停 1 启动
 
 ### 压力信息查询 (中优先级)
 
-topic: farm/$farmID/action/$action.data/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
+topic: farm/$farmID/action/$action.data/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey/switch/$switchKey
 
 ### 压力信息上报 (中优先级)
 
