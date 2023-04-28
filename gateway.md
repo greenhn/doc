@@ -153,12 +153,12 @@ payload: 1 代表成功， 0 代表失败
 curPower 当前电量
 curRSSI 当前信号强度
 
-topic: farm/$farmID/action/$action.ping/zone/$zoneKey/group/$groupKey/node/$nodeKey
+topic: farm/$farmID/action/$action.ping/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
 
 信息回传
 
-topic：c/$clientID/farm/$farmID/reply/$action.ping/zone/$zoneKey/group/$groupKey/node/$nodeKey
+topic：c/$clientID/farm/$farmID/reply/$action.ping/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey
 
 ```json
 {
