@@ -87,6 +87,7 @@ action
     "rotary": 7,
     "alert": 8,
     "sys": 9,
+    "status": 10,
 }
 ```
 ### config 指令 (中优先级)
@@ -143,6 +144,26 @@ payload:
 topic：c/$gateway_clientID/farm/$farmID/reply/$action.config/rtu/$rtu_clientID
 
 payload: 1 代表成功， 0 代表失败
+
+```json
+1
+```
+
+### 网关状态 信息回传 (中优先级)
+
+topic：c/$gateway_clientID/farm/$farmID/reply/$action.status/gateway
+
+1 代表在线, 0 代表离线
+
+```json
+1
+```
+
+### 控制器状态 信息回传 (中优先级)
+
+信息回传 topic：c/$gateway_clientID/farm/$farmID/reply/$action.status/rtu/zone/$zoneKey/group/$groupKey/node/$nodeKey
+
+1 代表在线, 0 代表离线
 
 ```json
 1
